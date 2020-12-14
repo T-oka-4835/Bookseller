@@ -5,7 +5,7 @@ class DeviseCreateCustomers < ActiveRecord::Migration[5.2]
     create_table :customers do |t|
       ## Database authenticatable
       t.string :last_name
-      t.string :forst_name
+      t.string :first_name
       t.string :last_name_kana
       t.string :first_name_kana
       t.string :postal_code

@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_12_14_031709) do
 
   create_table "customers", force: :cascade do |t|
     t.string "last_name"
-    t.string "forst_name"
+    t.string "first_name"
     t.string "last_name_kana"
     t.string "first_name_kana"
     t.string "postal_code"

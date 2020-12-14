@@ -2,13 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :admin, skip: :all
   devise_scope :admin do
-  get 'admin/sign_in',to: 'admin/sessions#new'
-  post 'admin/sign_in',to: 'admin/sessions#create'
-  delete 'admin/sign_out',to: 'admin/sessions#destroy'
+  get 'admins/sign_in',to: 'admin/sessions#new'
+  post 'admins/sign_in',to: 'admin/sessions#create'
+  delete 'admins/sign_out',to: 'admin/sessions#destroy'
   end
 
-  devise_for :customers, skip: :all
-  devise_scope :customers do
+  devise_for :customer, skip: :all
+  devise_scope :customer do
   get 'customers/sign_up', to: 'public/registrations#new'
   post 'customers/sign_up', to: 'public/registrations#create'
   patch 'customers', to: 'public/registrations#update'
@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   resources :orders, only:[:index, :show, :update]
   resources :items, only:[:index, :new, :create, :show, :edit, :update]
   resources :order_details, only: [:update]
-  patch "/orders/:order_id/order_details/:id" => "order_details#update"
+  patch "/orders/:order_id/order_detail/:id" => "order_details#update"
   end
 
 end
