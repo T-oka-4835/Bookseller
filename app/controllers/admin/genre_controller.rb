@@ -1,4 +1,6 @@
 class Admin::GenreController < ApplicationController
+  layout "admin-header"
+
   def index
   end
 
