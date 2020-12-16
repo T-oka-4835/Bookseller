@@ -1,16 +1,10 @@
-class Admin::ItemsController < ApplicationController
+class Admins::GenreController < ApplicationController
   layout "admin-header"
 
   def index
   end
 
-  def new
-  end
-
   def create
-  end
-
-  def show
   end
 
   def edit

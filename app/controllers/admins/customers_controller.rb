@@ -1,6 +1,6 @@
-class Admin::CustomersController < ApplicationController
+class Admins::CustomersController < ApplicationController
   layout "admin-header"
-  
+
   def index
   end
 
@@ -12,5 +12,5 @@ class Admin::CustomersController < ApplicationController
 
   def update
   end
-  
+
 end

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   devise_for :admin, skip: :all
   devise_scope :admin do
-  get 'admins/sign_in',to: 'admin/sessions#new'
-  post 'admins/sign_in',to: 'admin/sessions#create'
-  delete 'admins/sign_out',to: 'admin/sessions#destroy'
+  get 'admins/sign_in',to: 'admins/sessions#new'
+  post 'admins/sign_in',to: 'admins/sessions#create'
+  delete 'admins/sign_out',to: 'admins/sessions#destroy'
   end
 
   devise_for :customer, skip: :all
@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   resources :addresses, only:[:index, :create, :edit, :destroy, :update]
   end
 
-  namespace :admin do
+  namespace :admins do
   get "/" => "homes#top"
   resources :customers, only:[:index, :show, :edit, :update]
   resources :genres, only:[:index, :create, :edit, :update]
