@@ -1,0 +1,15 @@
+<h1>商品詳細ページ</h1>
+
+<h1>商品一覧</h1>
+  <h4>タイトル</h4>
+  <%= @item.name %>
+
+  <h4>紹介文</h4>
+  <%= @item.introduction %>
+
+  <h4>画像</h4>
+  <%= attachment_image_tag @item, :image, :fill, 100, 100, format: 'jpeg' %>
+
+<%= link_to "一覧に戻る", admins_items_path %>
+<%= link_to "編集する", edit_admins_item_path %>
+<%= link_to "削除する", admins_item_path(@item) , method: :delete, "data-confirm" => "本当に削除しますか?" %>
