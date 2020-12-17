@@ -1,3 +1,17 @@
 <h4>あなたのお買い物傾向から</h4>
 
 <h4>売れ筋ランキング</h4>
+
+<% @items.each do |item| %>
+  <h4>タイトル</h4>
+  <%= item.name %>
+
+  <h4>紹介文</h4>
+  <%= item.introduction %>
+
+  <h4>画像</h4>
+  <%= attachment_image_tag item, :image, :fill, 100, 100, format: 'jpeg' %>
+
+  <%= link_to "詳細", item_path(item) %>
+
+<% end %>
