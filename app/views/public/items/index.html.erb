@@ -2,7 +2,7 @@
 
 <h4>売れ筋ランキング</h4>
 
-<% @items.each do |item| %>
+<% @items.each do |item, genre| %>
   <h4>タイトル</h4>
   <%= item.name %>
 
