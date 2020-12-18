@@ -1,0 +1,19 @@
+<div>
+  <p>
+    住所の編集
+  </p>
+
+  <%= form_with model:@address, url: addresses_path, local:true do |f| %>
+    <p>氏名</p>
+    <%= f.text_field :name %>
+
+    <p>郵便番号</p>
+    <%= f.text_field :postal_code %>
+
+    <p>住所</p>
+    <%= f.text_field :address %>
+
+  <%= f.submit "住所を編集" %>
+  <% end %>
+
+</div>
