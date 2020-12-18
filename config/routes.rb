@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'calenders/index'
   devise_for :admin, skip: :all
   devise_scope :admin do
   get 'admins/sign_in',to: 'admins/sessions#new'
@@ -51,6 +52,7 @@ Rails.application.routes.draw do
   resources :carts, only:[:index, :update, :destroy, :create]
   resources :customers, only:[:edit, :show, :update]
   resources :addresses, only:[:index, :create, :edit, :destroy, :update]
+  resources :calenders, only:[:index]
   end
 
   namespace :admins do
