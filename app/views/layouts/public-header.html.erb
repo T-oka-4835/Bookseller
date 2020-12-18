@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop1</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div>
+                    <div class="">
+                    <div class="header-logo">Bookseller</div>
+                    </div>
+                    <div class="header-container">
+                        <% if admin_signed_in? %>
+                            <li class="header-nav">
+                                <%= link_to "お届け先", admins_items_path, class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "ログアウト", "#", class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "注文履歴", "#", class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "カート", "#", class: "btn-square-so-pop" %>
+                            </li>
+                        <% else %>
+                            <li class="header-nav">
+                                <%= link_to "About", about_path, class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "商品一覧", "", class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "新規登録", customers_sign_up_path, class: "btn-square-so-pop" %>
+                            </li>
+                            <li class="header-nav">
+                                <%= link_to "ログイン", customers_sign_in_path, class: "btn-square-so-pop" %>
+                            </li>
+                        <% end %>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <%= yield %>
+        </div>
+    </body>
+</html>

@@ -1,4 +1,6 @@
 class Public::AddressesController < ApplicationController
+  layout "public-header"
+
   def index
   end
 

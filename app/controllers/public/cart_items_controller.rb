@@ -1,4 +1,6 @@
 class Public::CartItemsController < ApplicationController
+  layout "public-header"
+
   def index
   end
 

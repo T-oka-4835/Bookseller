@@ -1,4 +1,6 @@
 class Public::CustomersController < ApplicationController
+  layout "public-header"
+
   def show
   end
 
@@ -7,11 +9,11 @@ class Public::CustomersController < ApplicationController
 
   def update
   end
-  
-  def unsubscribe 
-  end 
-  
+
+  def unsubscribe
+  end
+
   def withdraw
-  end 
+  end
 
 end

@@ -1,4 +1,6 @@
 class Public::OrdersController < ApplicationController
+  layout "public-header"
+
   def new
   end
 
@@ -16,5 +18,5 @@ class Public::OrdersController < ApplicationController
 
   def show
   end
-  
+
 end
