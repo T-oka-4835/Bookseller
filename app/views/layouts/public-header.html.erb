@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Shop1</title>
+        <title>Bookseller</title>
         <%= csrf_meta_tags %>
         <%= csp_meta_tag %>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,8 +11,8 @@
         <header>
             <nav>
                 <div>
-                    <div class="">
-                    <div class="header-logo">Bookseller</div>
+                    <div class="calender">
+                      <%= link_to "Bookseller", items_path, class: "btn-square-so-pop" %>
                     </div>
                     <div class="header-container">
                         <% if admin_signed_in? %>
