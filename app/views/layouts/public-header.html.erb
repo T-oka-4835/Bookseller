@@ -15,7 +15,7 @@
                       <%= link_to "Bookseller", items_path, class: "btn-square-so-pop" %>
                     </div>
                     <div class="header-container">
-                        <% if admin_signed_in? %>
+                        <% if customer_signed_in? %>
                             <li class="header-nav">
                                 <%= link_to "お届け先", addresses_path, class: "btn-square-so-pop" %>
                             </li>
@@ -23,7 +23,7 @@
                                 <%= link_to "ログアウト", "#", class: "btn-square-so-pop" %>
                             </li>
                             <li class="header-nav">
-                                <%= link_to "アカウント", "#", class: "btn-square-so-pop" %>
+                                <%= link_to "アカウント", customer_path(@customer.id), class: "btn-square-so-pop" %>
                             </li>
                             <li class="header-nav">
                                 <%= link_to "注文履歴", "#", class: "btn-square-so-pop" %>

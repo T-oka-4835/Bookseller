@@ -2,6 +2,7 @@ class Public::AddressesController < ApplicationController
   layout "public-header"
 
   def index
+    @customer = current_customer
     @addresses = Address.all
     @address = Address.new
   end
